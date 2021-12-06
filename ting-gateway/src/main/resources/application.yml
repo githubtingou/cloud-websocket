@@ -1,0 +1,38 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: ting-gateway
+  redis:
+    password: xxx
+    port: 6377
+    database: 2
+    host: xxx
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: xxx
+        username: xx
+        password: xxx
+        namespace: ting
+    gateway:
+      discovery:
+        locator:
+          # 开启基于服务名发现路由规则
+          enabled: true
+          # 开启小写转换
+          lower-case-service-id: true
+      routes:
+        - id: webscoket
+          uri: lb:ws://ting-websocket/
+          predicates:
+            - Path=/ting-websocket/socket/**
+        - id: ting-websocket-service
+          uri: lb:ting-websocket
+          predicates:
+            - Path=/ting-websocket/**
+
+listener:
+  service-name: ting-ting-websocket
+

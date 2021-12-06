@@ -1,0 +1,10 @@
+{
+  "properties": [
+    {
+      "name": "listener.service-name",
+      "type": "java.lang.String",
+      "description": "需要监听的服务名."
+    }
+  ]
+}
+}

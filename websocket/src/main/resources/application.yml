@@ -1,0 +1,22 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: ting-websocket
+  cloud:
+    nacos:
+      discovery:
+        username: xx
+        password: xxx
+        server-addr: 1xxx
+        namespace: ting
+  rabbitmq:
+    host: xx
+    port: 5672
+    username: xx
+    password: xx
+  redis:
+    password: xx
+    port: 6377
+    database: 2
+    host: xx
