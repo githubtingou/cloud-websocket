@@ -9,6 +9,19 @@ package com.ting.gateway.common;
  */
 public class RedisCommon {
 
-    public static final String RING_HASH_KEY = "ring:hash";
+    /**
+     * hash环
+     */
+    public static final String RING_HASH_KEY = "ting:ring:hash";
+
+    /**
+     * 每个客户端的下的hash
+     */
+    public static final String RING_CLIENT_HASH_KEY_PREFIX = "ting:client:ring:hash:";
+
+    /**
+     * websocket服务
+     */
+    public static final String WEBSOCKET_KEY = "ting:websocket";
 
 }
